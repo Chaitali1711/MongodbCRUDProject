@@ -7,7 +7,7 @@ module1.get("/", (req, res) => {
     console.log(req);
 
     const db = connection.db(process.env.DATABASE_NAME);
-    db.collection(process.env.COLLECTION_NAME).find().toArray((err, array) => {
+    db.collection(process.env.COLLECTION2).find().toArray((err, array) => {
         if (err) throw err;
         else {
             res.send(array);
